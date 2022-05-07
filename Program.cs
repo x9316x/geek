@@ -11,9 +11,9 @@ string[] ArrayInput(int originalArrayLength)
         Console.WriteLine("Введите " + (index + 1) + " элемент массива");
         string? arrayElementTempVaraible = Console.ReadLine();
         
-        while(arrayElementTempVaraible == null)
+        if(arrayElementTempVaraible == null)
         {
-            arrayElementTempVaraible = Console.ReadLine();
+            arrayElementTempVaraible = "";
         }
         
         originalArray[index] = arrayElementTempVaraible;
@@ -23,7 +23,7 @@ string[] ArrayInput(int originalArrayLength)
 }
 
 // создание нового массива из строк,
-// длинна которых меньше либо равна 3 символам.
+// длина которых меньше либо равна 3 символам.
 string[] LessThanThreeArray(string[] originalArray)
 {
     int LessThanThreeArrayLength = 0;
